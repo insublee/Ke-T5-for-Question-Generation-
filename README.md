@@ -8,8 +8,10 @@ GPU와 큰 메모리를 활성화 시킨 후 모두 실행하시면 됩니다.
 ## data
 - KorQuAD v1.0
 - qg,qa,ans_ext 포맷으로 문제를 각각 변경
+- original data
+  - \{\"context\": \"42 is the answer tolife, the universe and everything\", \"question\": \"What is the answer to life?\", \"answer\" : \"42\"\}
 - QA
-  - src : \[\"question: What is the answer to life? context: 42 is the answer tolife, the universe and everything<EOS>\"\]
+  - src : \[\"question: What is the answer to life? context: 42 is the answer tolife, the universe and everything.<EOS>\"\]
   - tgt : 42<EOS>
 - QG
   - src : \[\"generate question. answer : 42 context: 42 is the answer to life, the universe and everything.<EOS>\"\]
