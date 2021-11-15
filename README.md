@@ -5,11 +5,18 @@
 과거 했던 프로젝트 재현을 위해 google colaboratory에서 돌아갈 수 있게끔 코드를 작성하였습니다.
 GPU와 큰 메모리를 활성화 시킨 후 모두 실행하시면 됩니다.
 
-# 학습 설명
 ## data
 - KorQuAD v1.0
 - qg,qa,ans_ext 포맷으로 문제를 각각 변경
-  - ㅁㅇㄴ
+- QA
+  - src : \[\"question: What is the answer to life? context: 42 is the answer tolife, the universe and everything<EOS>\"\]
+  - tgt : 42
+- QG
+  - src : \[\"generate question. answer : 42 context: 42 is the answer to life, the universe and everything.<EOS>\"\]
+  - tgt : What is the answer to life?
+- ans_ext
+  - src : \[\"extract answer. context: 42 is the answer to life, the universe and everything.<EOS>\"\]
+  - tgt : 42
 ## model
 ## train
 ## validation
