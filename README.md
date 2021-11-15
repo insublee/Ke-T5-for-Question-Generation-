@@ -10,20 +10,23 @@ GPU와 큰 메모리를 활성화 시킨 후 모두 실행하시면 됩니다.
 - qg,qa,ans_ext 포맷으로 문제를 각각 변경
 - QA
   - src : \[\"question: What is the answer to life? context: 42 is the answer tolife, the universe and everything<EOS>\"\]
-  - tgt : 42
+  - tgt : 42<EOS>
 - QG
   - src : \[\"generate question. answer : 42 context: 42 is the answer to life, the universe and everything.<EOS>\"\]
-  - tgt : What is the answer to life?
+  - tgt : What is the answer to life?<EOS>
 - ans_ext
   - src : \[\"extract answer. context: 42 is the answer to life, the universe and everything.<EOS>\"\]
-  - tgt : 42
+  - tgt : 42<EOS>
 
 ## model
 - KETI-AIR/ke-t5-small-ko from HuggingFace
 - pytorch-lightning
 ## train
-- 
+- optimizer : AdamW
+- scheduler : get_linear_schedule_with_warmup
+- no_decay : [bias, LayerNorm.weight]
+- logger : WandbLogger
+- plugins : DeepSpeedPlugin
+- callbacks : [LearningRateMonitor, ModelCheckpoint, EarlyStopping]
 ## validation
-
-
-@ke-T5
+- metric : bleu, sacrebleu, meteor, rouge1, rouge2, rougeL
