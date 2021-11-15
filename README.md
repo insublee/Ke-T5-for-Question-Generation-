@@ -1,4 +1,4 @@
-# Question Answering & Question Generation & answer extration K2-T5 with KorQuAD
+# Question Answering & Question Generation & answer extration T5 with KorQuAD
 학습된 K2-T5 모델을 기반으로 질의응답, 질문 생성, 정답 생성 모델을 만들었습니다. 멀티테스크 모델을 학습시키기 위해 Question Answering 데이터셋인 KorQuAD v1.0을 사용하였습니다.
 
 # 사용 방법
