@@ -17,8 +17,12 @@ GPU와 큰 메모리를 활성화 시킨 후 모두 실행하시면 됩니다.
 - ans_ext
   - src : \[\"extract answer. context: 42 is the answer to life, the universe and everything.<EOS>\"\]
   - tgt : 42
+
 ## model
+- KETI-AIR/ke-t5-small-ko from HuggingFace
+- pytorch-lightning
 ## train
+- 
 ## validation
 
 
